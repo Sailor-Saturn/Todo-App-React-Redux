@@ -2,6 +2,7 @@ import {connect} from 'react-redux';
 import {toggleTodo} from '../actions';
 import TodoList from '../components/TodoList';
 import {VisibilityFilters} from '../actions';
+import { decrementCount } from '../actions';
 
 /**
  * Method that filters the todo list
@@ -26,7 +27,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    toggleTodo: id => dispatch(toggleTodo(id))
+    toggleTodo: id => dispatch(toggleTodo(id)),
+    decrementTodo: count => dispatch(decrementCount())
 });
 
 export default connect(

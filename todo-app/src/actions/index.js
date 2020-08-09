@@ -58,7 +58,7 @@ export function setVisibilityFilter(filter){
 export function incrementCount(){
     return {
         type: INCREMENT_TODOS,
-        count:0
+        count: 0
     }
 }
 
