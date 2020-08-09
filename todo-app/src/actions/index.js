@@ -6,6 +6,10 @@ export const ADD_TODO = 'ADD_TODO';
 export const TOGGLE_TODO = 'TOGGLE_TODO';
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
 
+// COUNT_TODOS is reponsible to say how many tasks are active
+export const INCREMENT_TODOS = 'INCREMENT_TODOS';
+export const DECREMENT_TODOS = 'DECREMENT_TODOS';
+
 /**
  * Types of visibility filters: Show every todo, show only completed, show only active todos
  * This is a enum, it's easier to
@@ -44,5 +48,27 @@ export function setVisibilityFilter(filter){
     return {
         type: SET_VISIBILITY_FILTER,
         filter
+    }
+}
+
+/**
+ * Action creator for the counter of tasks
+ *
+ */
+export function incrementCount(){
+    return {
+        type: INCREMENT_TODOS,
+        count:0
+    }
+}
+
+/**
+ * Action creator for the counter of tasks
+ *
+ */
+export function decrementCount(){
+    return {
+        type: DECREMENT_TODOS,
+        count: 0
     }
 }
