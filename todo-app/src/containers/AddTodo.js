@@ -6,8 +6,7 @@ import { incrementCount } from '../actions';
 const AddTodo = ({dispatch}) =>{
     let input;
     return (
-        <div>
-            <form onSubmit={e => {
+            <form className="form-inline" onSubmit={e => {
                 e.preventDefault()
                 if(!input.value.trim()){
                     return
@@ -16,12 +15,11 @@ const AddTodo = ({dispatch}) =>{
                 dispatch(incrementCount())
                 input.value = ''
             }}>
-                <input ref = {node => input = node} />
+                <input  className="w3-input" placeholder="What needs to be done?" ref = {node => input = node} />
                 <button type="submit">
                     Add Todo
                 </button>
             </form>
-        </div>
     );
 };
 

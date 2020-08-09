@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2d3436;
+    font-size: 200%;
+    font-family: 'Tangerine', serif;
+
+}
+
+.todo-list{
+    width: 1000px;
+    color:#2d3436;
+    float: bottom;
+}
+
+.todo-list header{
+    margin: 0;
+    padding: 1em 0;
+    color: #e11c3e;
+    text-align: center;
+    border-top: 1em solid #e11c3e;
+    border-bottom:1px solid #eeeeee;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    background-color: #fff;
+}
+
+.todo-list footer{
+    margin:0;
+    padding: .7em 0;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    color:#2d3436;
+    background-color: #fff;
+    display: flex;
+}
+
+.todo-list .main {
+    background-color: #fff;
+}
+
+.todo-list .do {
+    padding: 2px;
+}
+
+button{
+    padding: .03rem;
+    border: 0.5rem solid #e11c3e;
+    border-radius: 0.3rem;
+    background: #e11c3e;
+    color: white;
+}
+
+.form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+}
+
+.form-inline input {
+    width: 85%;
+    padding-right: 20px;
+}
+
+/* Style the submit button */
+.form-inline button {
+    padding: 10px 10px;
+    border: 1px solid #ddd;
+    color: white;
+
+}
+
+/* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
+@media (max-width: 800px) {
+    .form-inline input {
+        margin: 10px 0;
+    }
+
+    .form-inline {
+        flex-direction: line;
+    }
+
+}
+
+.todo-list footer .tasks-number{
+    width: 50%;
+}
+
+input[type=checkbox]
+{
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(2); /* IE */
+    -moz-transform: scale(2); /* FF */
+    -webkit-transform: scale(2); /* Safari and Chrome */
+    -o-transform: scale(2); /* Opera */
+    transform: scale(2);
+    padding: 10px;
+    margin-left: 8px;
+    margin-right: 25px;
+}

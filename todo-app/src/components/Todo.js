@@ -7,20 +7,19 @@ import PropTypes from 'prop-types';
  * the todo
  *
  */
-const Todo = ({onClick, completed, text}) => (
-    <li
-        onClick = {onClick}
-        style = {{
-            textDecoration: completed ? 'line-through' : 'none'
-        }}
-    >
-        {text}
-    </li>
+const Todo = ({onClick, text}) => (
+    <div className="do">
+        <input type="checkbox"
+            onClick = {onClick}
+        />
+        <label>
+            <span className="label">{text}</span>
+        </label>
+    </div>
 );
 
 Todo.propTypes = {
     onClick: PropTypes.func.isRequired,
-    completed: PropTypes.bool.isRequired,
     text: PropTypes.string.isRequired
 };
 export default Todo;

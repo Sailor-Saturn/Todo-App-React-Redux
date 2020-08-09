@@ -8,7 +8,7 @@ import Todo from './Todo';
  * Todo List needs the todos and the ToggleTodo reducer
  */
 const TodoList = ({todos, toggleTodo, decrementTodo}) => (
-    <ul>
+    <div>
         {todos.map(todo =>
             <Todo
                 key = {todo.id}
@@ -19,7 +19,7 @@ const TodoList = ({todos, toggleTodo, decrementTodo}) => (
                 }}
             />
         )}
-    </ul>
+    </div>
 );
 
 TodoList.propTypes = {

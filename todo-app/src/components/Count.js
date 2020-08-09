@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 
 
 const Count = ({count}) => {
-    return <span>{count} tasks left</span>
+    return <span style={{
+        marginLeft:"20px",
+        marginRight:"530px"
+}}>{count} tasks left</span>
 };
 
 Count.propTypes = {
